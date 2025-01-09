@@ -41,8 +41,8 @@ def commits():
     response = urlopen('https://api.github.com/repos/mochimochiboby/5MCSI_Metriques_2025/commits')
     raw_content = response.read()
     json_content = json.loads(raw_content.decode('utf-8'))
-    results = []
-    return render_template('commits.html')
+    total_releves = len(json_content.get('list', []))
+    return jsonify(commits=commits)
 
 @app.route('/extract-minutes/<date_string>')
 def extract_minutes(date_string):
