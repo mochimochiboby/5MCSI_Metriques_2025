@@ -1,6 +1,7 @@
 <p>Nombre de commits</p>
 https://api.github.com/repos/mochimochiboby/5MCSI_Metriques_2025/commits
 
+
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +25,7 @@ https://api.github.com/repos/mochimochiboby/5MCSI_Metriques_2025/commits
     });
     // Configurer les options du graphique en ligne
     var options = {
-      title: 'Évolution des températures de la ville de Tawarano',
+      title: 'Nombres de commits',
       curveType: 'function',
       legend: { position: 'bottom' }
     };
@@ -32,7 +33,7 @@ https://api.github.com/repos/mochimochiboby/5MCSI_Metriques_2025/commits
     chart.draw(dataTable, options);
   }
   // Récupération de données depuis notre API /tawarano/
-  fetch('/tawarano/')
+  fetch('/commits/')
     .then(response => response.json())
     .then(data => {
       drawChart(data);
