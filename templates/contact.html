@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <style>
+<style>
+h1 
+{ 
+    font-family: Tahoma;
+    text-align: center; 
+}
+</style>
 
-           h1 {
-font-family: Tahoma;
-text-align: center; 
-    }
-    
-    </style>
- 
 <head>
     <h1> Formulaire de contact </h1>
 </head>
+
+<body>
+<fieldset>
+    <legend>Contact</legend>
+      <label for="nom">Nom <em>*</em></label>
+      <input id="nom" placeholder="Olivier Serre" autofocus="" required=""><br>
+      <label for="telephone">Portable</label>
+      <input id="telephone" type="tel" placeholder="06xxxxxxxx" pattern="06[0-9]{8}"><br>
+      <label for="email">Email <em>*</em></label>
+      <input id="email" type="email" placeholder="p.nom@cfacampusmontsouris.fr required="" pattern="[a-zA-Z]*.[a-zA-Z]*@cfacampusmontsouris.fr"><br>
+  </fieldset>
+</body>
